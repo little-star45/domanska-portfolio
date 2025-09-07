@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+@import "tailwindcss";
+
+@theme{
+    --font-family-figtree: 'Figtree', serif;
+    --font-family-fira-code: 'Fira Code', monospace;
+    --color-button-nohover: var(--color-cyan-600);
+    --color-button-hover: var(--color-cyan-700);
+    /* --color-button-hover: hsl(47, 88%, 53%); */
+}
+
+@layer components{
+    /* .attribution { 
+        font-size: 11px; text-align: center;
+        padding: 1rem;
+    }
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    } */
+
+    .text-section-title{
+        font-size: 24px;
+        line-height:150%;
+        letter-spacing: 0px;
+        font-family: var(--font-family-figtree);
+        font-weight: 700;
+    }
+
+
+    .custom-box-shadow{
+        box-shadow: 6px 6px 0 0 rgba(0, 0, 0, 1)
+    }
+
+}

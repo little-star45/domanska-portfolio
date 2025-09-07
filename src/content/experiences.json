@@ -1,0 +1,34 @@
+[
+  {
+    "position": "Python Programmer",
+    "date": "2025 - 2025",
+    "company": "N/A",
+    "technologies": ["FastAPI", "MongoDB", "PostgreSQL", "MySQL", "Docker", "Linux", "Go", "Git", "Redis", "Celery"],
+    "responsibilities": [
+      "Developed FastAPI applications with service chaining and system integrations",
+      "Built REST APIs for e-commerce solutions",
+      "Worked with MongoDB, PostgreSQL, MySQL, Docker, Linux, Go, Git, Redis, Celery"
+    ]
+  },
+  {
+    "position": "Software & Data Analysis Engineer",
+    "date": "2023 - 2025",
+    "company": "BWI Group - Krakow, Poland",
+    "technologies": ["Python", "PyQt", "Tkinter", "NumPy", "Pandas", "SciPy", "React", "StyledComponents", "Plotly", "PostgreSQL", "MongoDB"],
+    "responsibilities": [
+      "Created desktop applications for measurement data analysis (Python, PyQt, Tkinter, NumPy, Pandas, SciPy)",
+      "Processed Excel/CSV datasets and managed PostgreSQL & MongoDB databases",
+      "Developed React web apps with StyledComponents and Plotly for data visualization",
+      "Modernized legacy applications (VBA → Python) and refactored procedural code to OOP and functional programming"
+    ]
+  },
+  {
+    "position": "Programming Instructor",
+    "date": "2022 - present",
+    "company": "Coding Giants - Krakow, Poland",
+    "technologies": ["Python", "Lua/Roblox", "HTML", "CSS", "JavaScript", "AppInventor", "Scratch"],
+    "responsibilities": [
+      "Teaching children and teenagers programming concepts. Teacher in programming workshops and summer camps."
+    ]
+  }
+]

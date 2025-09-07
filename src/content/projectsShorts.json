@@ -1,0 +1,32 @@
+[
+  {
+    "projectTitle": "MP4 Cutter",
+    "description": "Simple MP4 video cutting tool built with PyQt.",
+    "skills": ["Python", "PyQt"],
+    "projectName": "mp4_cutter_pyqt"
+  },
+  {
+    "projectTitle": "Weather App",
+    "description": "Weather app using IMGW data built with Tkinter.",
+    "skills": ["Python", "Tkinter", "RESTapi"],
+    "projectName": "weather-app-simply-tkinter-imgw"
+  },
+  {
+    "projectTitle": "Balancing Market",
+    "description": "Interactive exploration of the Polish Balancing Market with React and Plotly.",
+    "skills": ["React", "Plotly", "JavaScript"],
+    "projectName": "balancing-market-app-web"
+  },
+  {
+    "projectTitle": "Pokedex App",
+    "description": "Practice app interacting with PokeAPI, built with React.",
+    "skills": ["React"],
+    "projectName": "pokedexApp"
+  },
+  {
+    "projectTitle": "Algorithmic Thinking Book — Example Translations",
+    "description": "Translation of exercises/examples from Daniel Zingaro's book into Python.",
+    "skills": ["Python"],
+    "projectName": "algorithmic-thinking-python-d-zingaro-book"
+  }
+]
