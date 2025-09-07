@@ -5,7 +5,7 @@ import huskyDog from '../assets/reshot-icon-husky-dog-WY4S8KFRCX.svg'
 import ProjectModal from '../components/ProjectModal.jsx'
 import ProjectCard from '../components/ProjectCard.jsx'
 import ExperienceCard from '../components/ExperienceCard.jsx'
-import Footer from '../components/footer.jsx'
+import Footer from '../components/Footer.jsx'
 import Navbar from '../components/Navbar.jsx'
 import Skills from '../components/Skills.jsx'
 
