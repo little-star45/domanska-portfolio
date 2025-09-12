@@ -57,7 +57,7 @@
     "thumbnail": "/src/assets/thumbnail/frontendmentor_thumbnail.jpg",
     "slug": "frontendmentor-exercise-solutions",
     "demoLink": "https://www.example.com/",
-    "markdownPath": "/src/content/projects/frontendmentor-exercise-solutions/index.md"
+    "markdownPath": "/src/content/projects/frontendmentor-exercise/index.md"
   },
   {
     "projectTitle": "My personal portfolio",
@@ -77,6 +77,6 @@
     "thumbnail": "/src/assets/thumbnail/merit_order_price_simulations_thumbnail.jpg",
     "slug": "merit-order-price-simulations",
     "demoLink": "https://www.example.com/",
-    "markdownPath": "/src/content/projects/merit-order-price-simulations/index.md"
+    "markdownPath": "/src/content/projects/merit-order-desktop/index.md"
   }
 ]
