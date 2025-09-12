@@ -36,7 +36,7 @@ Run main.py
 Demo of the app in action:
 
 <img 
-    src="/public/content/projects/weather-app/workflow-demo.gif" 
+    src="/content/projects/weather-app/workflow-demo.gif" 
     alt="Full workflow: enter city and view weather data in the GUI" 
     class="w-full max-w-full mx-auto border-2 border-gray-600 rounded-lg"
 />

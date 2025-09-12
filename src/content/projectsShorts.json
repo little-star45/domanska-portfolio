@@ -4,79 +4,79 @@
     "description": "Simple MP4 video cutting tool built with PyQt.",
     "skills": ["Python", "PyQt"],
     "projectName": "mp4_cutter_pyqt",
-    "thumbnail": "/public/assets/thumbnail/mp4_cutter_thumbnail.jpg",
+    "thumbnail": "/assets/thumbnail/mp4_cutter_thumbnail.jpg",
     "slug": "mp4-cutter",
     "demoLink": "https://www.example.com/",
-    "markdownPath": "/public/content/projects/mp4-cutter/index.md"
+    "markdownPath": "/content/projects/mp4-cutter/index.md"
   },
   {
     "projectTitle": "Weather App",
     "description": "Weather app using IMGW data built with Tkinter.",
     "skills": ["Python", "Tkinter", "RESTapi"],
     "projectName": "weather-app-simply-tkinter-imgw",
-    "thumbnail": "/public/assets/thumbnail/weather_app_thumbnail.jpg",
+    "thumbnail": "/assets/thumbnail/weather_app_thumbnail.jpg",
     "slug": "weather-app",
     "demoLink": "https://www.example.com/",
-    "markdownPath": "/public/content/projects/weather-app/index.md"
+    "markdownPath": "/content/projects/weather-app/index.md"
   },
   {
     "projectTitle": "Balancing Market",
     "description": "Interactive exploration of the Polish Balancing Market with React and Plotly.",
     "skills": ["React", "Plotly", "JavaScript", "CSS", "HTML", "Bootstrap", "Styled Components"],
     "projectName": "balancing-market-app-web",
-    "thumbnail": "/public/assets/thumbnail/balancing_market_thumbnail.jpg",
+    "thumbnail": "/assets/thumbnail/balancing_market_thumbnail.jpg",
     "slug": "balancing-market",
     "demoLink": "https://www.example.com/",
-    "markdownPath": "/public/content/projects/balancing-market/index.md"
+    "markdownPath": "/content/projects/balancing-market/index.md"
   },
   {
     "projectTitle": "Pokedex App",
     "description": "Practice app interacting with PokeAPI, built with React.",
     "skills": ["React", "JavaScript", "RESTapi", "CSS", "HTML", "Bootstrap", "Styled Components"],
     "projectName": "pokedexApp",
-    "thumbnail": "/public/assets/thumbnail/pokedex_app_thumbnail.jpg",
+    "thumbnail": "/assets/thumbnail/pokedex_app_thumbnail.jpg",
     "slug": "pokedex-app",
     "demoLink": "https://little-star45.github.io/pokedexApp",
-    "markdownPath": "/public/content/projects/pokedex-app/index.md"
+    "markdownPath": "/content/projects/pokedex-app/index.md"
   },
   {
     "projectTitle": "Algorithmic Thinking Book — Example Translations",
     "description": "Translation of exercises/examples from Daniel Zingaro's book into Python.",
     "skills": ["Python"],
     "projectName": "algorithmic-thinking-python-d-zingaro-book",
-    "thumbnail": "/public/assets/thumbnail/algorithmic_thinking_thumbnail.jpg",
+    "thumbnail": "/assets/thumbnail/algorithmic_thinking_thumbnail.jpg",
     "slug": "algorithmic-thinking-book",
     "demoLink": "https://www.example.com/",
-    "markdownPath": "/public/content/projects/alghoritmic-book/index.md"
+    "markdownPath": "/content/projects/alghoritmic-book/index.md"
   },
   {
     "projectTitle": "Frontendmentor Exercise Solutions",
     "description": "Solutions to various challenges on Frontendmentor.",
     "skills": ["JavaScript", "React", "CSS", "HTML", "TailwindCSS"],
     "projectName": "frontendmentor-exercise-solutions",
-    "thumbnail": "/public/assets/thumbnail/frontendmentor_thumbnail.jpg",
+    "thumbnail": "/assets/thumbnail/frontendmentor_thumbnail.jpg",
     "slug": "frontendmentor-exercise-solutions",
     "demoLink": "https://www.example.com/",
-    "markdownPath": "/public/content/projects/frontendmentor-exercise/index.md"
+    "markdownPath": "/content/projects/frontendmentor-exercise/index.md"
   },
   {
     "projectTitle": "My personal portfolio",
     "description": "Showcase of my projects and skills.",
     "skills": ["JavaScript", "React", "CSS", "HTML", "TailwindCSS", "Vite"],
     "projectName": "my-personal-portfolio",
-    "thumbnail": "/public/assets/thumbnail/my_personal_portfolio_thumbnail.jpg",
+    "thumbnail": "/assets/thumbnail/my_personal_portfolio_thumbnail.jpg",
     "slug": "my-personal-portfolio",
     "demoLink": "https://www.example.com/",
-    "markdownPath": "/public/content/projects/my-personal-portfolio/index.md"
+    "markdownPath": "/content/projects/my-personal-portfolio/index.md"
   },
     {
     "projectTitle": "Merit Order Price Simulations for Poland - Desktop App",
     "description": "Simulations of merit order pricing in the Polish electricity market.",
     "skills": ["Python", "Tkinter", "Matplotlib"],
     "projectName": "merit-order-price-simulations",
-    "thumbnail": "/public/assets/thumbnail/merit_order_price_simulations_thumbnail.jpg",
+    "thumbnail": "/assets/thumbnail/merit_order_price_simulations_thumbnail.jpg",
     "slug": "merit-order-price-simulations",
     "demoLink": "https://www.example.com/",
-    "markdownPath": "/public/content/projects/merit-order-desktop/index.md"
+    "markdownPath": "/content/projects/merit-order-desktop/index.md"
   }
 ]

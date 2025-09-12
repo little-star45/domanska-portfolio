@@ -43,13 +43,13 @@ npm start
 
 Some snippets from the application:
 <img 
-    src="/public/content/projects/pokedex-app/screen1.png" 
+    src="/content/projects/pokedex-app/screen1.png" 
     alt="Full workflow: browse and view Pokémon details in the app" 
     class="w-full max-w-full mx-auto border-2 border-gray-600 rounded-lg" 
 />
 
 <img 
-    src="/public/content/projects/pokedex-app/screen2.png" 
+    src="/content/projects/pokedex-app/screen2.png" 
     alt="Full workflow: browse and view Pokémon details in the app" 
     class="w-full max-w-full mx-auto border-2 border-gray-600 rounded-lg" 
 />
