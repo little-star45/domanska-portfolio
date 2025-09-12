@@ -52,7 +52,7 @@ py main.py
 Demo of the app in action:
 
 <img
-  src="public/content/projects/mp4-cutter/workflow-demo.gif"
+  src="/content/projects/mp4-cutter/workflow-demo.gif"
   alt="MP4 Cutter - application window"
   class="w-full max-w-full mx-auto border rounded"
 />
