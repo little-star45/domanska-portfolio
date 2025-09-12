@@ -87,7 +87,7 @@ merit-order-price-simulation-v1.0/
 
 ## Oprimization strategy
 <img 
-    src="/src/content/projects/merit-order-desktop/screen3.png" 
+    src="/public/content/projects/merit-order-desktop/screen3.png" 
     alt="Full workflow: enter city and view weather data in the GUI" 
     class="w-full max-w-full mx-auto border-2 border-gray-600 rounded-lg"
 />
@@ -96,12 +96,12 @@ The program counting social welfare was written according to the same algorithm 
 
 ## Results and Visualizations
 <img 
-    src="/src/content/projects/merit-order-desktop/screen2.png" 
+    src="/public/content/projects/merit-order-desktop/screen2.png" 
     alt="Full workflow: enter city and view weather data in the GUI" 
     class="w-full max-w-full mx-auto border-2 border-gray-600 rounded-lg"
 />
 <img 
-    src="/src/content/projects/merit-order-desktop/screen1.png" 
+    src="/public/content/projects/merit-order-desktop/screen1.png" 
     alt="Full workflow: enter city and view weather data in the GUI" 
     class="w-full max-w-full mx-auto border-2 border-gray-600 rounded-lg"
 />

@@ -40,7 +40,7 @@ npm run dev
 
 ### Screenshots
 <img 
-src="/src/content/projects/balancing-market/workflow-demo.gif" 
+src="/public/content/projects/balancing-market/workflow-demo.gif" 
 alt="Balancing Market App - workflow git" 
 class="w-full max-w-full mx-auto border-2 border-gray-600 rounded-lg"
 />

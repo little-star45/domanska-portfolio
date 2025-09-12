@@ -1,4 +1,4 @@
-# Pokedex App (React / JS)
+## Pokedex App (React / JS)
 
 ### Live Demo
 The app is available online here: <a href="https://little-star45.github.io/pokedexApp/" target="_blank"> [PokedexApp](https://little-star45.github.io/pokedexApp/)</a>
@@ -43,13 +43,13 @@ npm start
 
 Some snippets from the application:
 <img 
-    src="/src/content/projects/pokedex-app/screen1.png" 
+    src="/public/content/projects/pokedex-app/screen1.png" 
     alt="Full workflow: browse and view Pokémon details in the app" 
     class="w-full max-w-full mx-auto border-2 border-gray-600 rounded-lg" 
 />
 
 <img 
-    src="/src/content/projects/pokedex-app/screen2.png" 
+    src="/public/content/projects/pokedex-app/screen2.png" 
     alt="Full workflow: browse and view Pokémon details in the app" 
     class="w-full max-w-full mx-auto border-2 border-gray-600 rounded-lg" 
 />

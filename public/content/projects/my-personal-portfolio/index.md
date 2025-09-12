@@ -1,4 +1,4 @@
-## Domańska — Portfolio (React + Vite)
+## Patrycja Domańska — Portfolio (React + Vite)
 
 A personal portfolio built with React (Vite), showcasing projects, experience, and contact in a lightweight, modern format. Deployed on Vercel.
 
@@ -35,6 +35,12 @@ domanska-portfolio/
   vite.config.js
   eslint.config.js
   package.json
+  public/
+    assets/
+      icons/ #technologies icons
+      thumbnail/ #projects thumbnail
+    content/
+      projects/
   src/
     assets/               # images, icons, media
     components/           # shared UI: Button, Card, SectionTitle, etc.
