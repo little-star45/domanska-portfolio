@@ -25,24 +25,38 @@ function Home() {
   return (
     <>
     <Navbar/>
-    <main className='p-4 space-y-6 max-w-screen-xl mx-auto font-family-fira-code'>
-    {isModalOpen && <ProjectModal className="fixed inset-0 z-50 backdrop-blur-sm" description={projectsData.find(project => project.projectName === selectedProject)?.description} isOpen={isModalOpen} setIsOpen={setIsModalOpen} toggleModal={modalToggle} projectName={selectedProject}/>}
-    <section className='#section-about-me flex justify-center items-center'>
+    <main className='p-4 space-y-6 max-w-screen-xl mx-auto font-family-fira-code scroll-pt-16'>
+    {isModalOpen && 
+        <ProjectModal className="fixed inset-0 z-50 backdrop-blur-sm" 
+            isOpen={isModalOpen} 
+            setIsOpen={setIsModalOpen} 
+            toggleModal={modalToggle} 
+            projectName={selectedProject}
+            markdownPath={projectsData.find(project => project.projectName === selectedProject)?.markdownPath}
+            />
+    }
+    <section className='flex justify-center items-center'>
         <article className='max-w-3/5 text-center space-y-4'>
-            <p className="text-section-title">About Me</p>
+            <p id='section-about-me' className="text-section-title">About Me</p>
             <div className='flex flex-col md:flex-row justify-center items-center gap-4'>
-                <p className='text-justify max-w-4/5'>Graduated&nbsp;with&nbsp;a master's degree&nbsp;in renewable energy. Awarded an honorable mention at the university's Research Circles conference for her work related to modeling long-term energy forecasts.&nbsp;A&nbsp;programmer by passion. Using my skills,&nbsp;I&nbsp;wrote several hundred lines of code in Python for data processing in my engineering thesis and master's thesis.&nbsp;A&nbsp;former Girl Scout.&nbsp;I&nbsp;have four years of experience in science tutoring.&nbsp;I&nbsp;was a member of the scientific team for clean air at the Faculty of Energy and Fuels at the AGH University of Science and Technology in Krakow. Currently&nbsp;a&nbsp;full-time programmer of data analysis applications in Python and React. After hours&nbsp;I&nbsp;like teaching programming to children and teenagers :). In my free time&nbsp;I&nbsp;love to ride my bike, bake sourdough bread&nbsp;and solve problems on Leetcode ;)</p>
-                <div className='hidden md:block w-48 h-48'>
+                <p className='text-justify max-w-4/5'>
+                    Master's degree in renewable energy, honored at the university's Research Circles conference for work on long-term energy forecasts.
+                    Passionate programmer with experience in Python and React - currently focusing on AI integrations and&nbsp;Python-based&nbsp;application development.
+                    Former Girl Scout with&nbsp;a&nbsp;background in science tutoring and researcher at AGH University of Science and Technology.
+                    After hours,&nbsp;I&nbsp;enjoy teaching programming to kids, cycling, baking sourdough bread,&nbsp;and solving challenges on LeetCode.
+                </p>
+                <div className='hidden md:block w-48 h-48 p-2'>
                     <img src={huskyDog} alt="Husky Dog" className="w-full h-full object-cover" />
                 </div>
+                
             </div>
              
             <p className='text-left font-semibold'>Some of my hobbies include:</p>
             <ul className='list-disc list-inside text-justify'>
                 <li>Bikepacking</li>
-                <li>Python programming and electronics</li>
+                <li>Python programming</li>
                 <li>Baking sourdough bread</li>
-                <li>literature: SF, popular science books, a fan of Terry Pratchett</li>
+                <li>literature: SF, fantasy (T. Pratchett/U. Le Guin), popular science</li>
             </ul>
         </article>
         
@@ -57,12 +71,13 @@ function Home() {
     <hr className='border-1 border-gray-200 shadow-gray-700 shadow-lg'/>
     <section id="section-projects" className='space-y-4'>
         <p className="text-section-title text-center">Projects</p>
-        <p className="text-center">Here are some of my recent projects:</p>
+        <p className="text-center">Here are some of my recent completed projects - for more, please visit my GitHub:</p>
         <div className='flex flex-row flex-wrap justify-center space-y-6 space-x-6 items-stretch'>
             {projectsData.map((project, index) => (
             <ProjectCard
                 key={index}
                 projectTitle={project.projectTitle}
+                projectThumbnail={project.thumbnail}
                 description={project.description}
                 skills={project.skills}
                 projectName={project.projectName}
@@ -73,7 +88,7 @@ function Home() {
         </div>
     </section>
     <hr className='border-1 border-gray-200 shadow-gray-700 shadow-lg' />
-    <section id='#section-experience' className='space-y-5'>
+    <section id='section-experience' className='space-y-5'>
         <p className="text-section-title text-center">Experience</p>
 
             {experiences.map((exp, index) => (
@@ -103,7 +118,7 @@ function Home() {
     <section>
         <p className="text-section-title text-center">Contact</p>
     </section>
-    <Footer id="#section-contact"/>
+    <Footer id="section-contact"/>
     </main>
 </>
   )

@@ -1,6 +1,6 @@
 {
   "Languages": ["Python", "JavaScript", "HTML", "CSS", "C++", "Go", "SQL"],
-  "Frontend": ["React", "TailwindCSS", "Bootstrap", "Styled Components"],
+  "Frontend": ["React", "TailwindCSS", "Bootstrap", "Styled Components", "Vite"],
   "Backend & Tools": ["FastAPI", "Django", "Celery", "Redis", "Git", "Docker", "Linux", "RESTapi"],
   "Data & Analysis": ["NumPy", "Pandas", "SciPy", "Plotly", "PyQt", "Matplotlib", "Tkinter", "Excel/CSV"],
   "AI & Integrations": ["Ollama", "GPT", "Cursor", "Gemini", "OAuth2", "Basic Auth", "LDAP"],

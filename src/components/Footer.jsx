@@ -8,7 +8,19 @@ import emailIcon from '../assets/footer/mail-symbol-3003.png'
 const Footer = () => {
 
   return (
-    <div className='text-center space-y-2'>
+    <div className='text-center space-y-3'>
+            <p>Thank you for visiting my portfolio!</p>
+            <article className="p-4 text-center mx-auto max-w-1/2 bg-gray-200 rounded-lg relative overflow-hidden">
+
+            My profiles on CTF sites, Leetcode, and so on:
+            <br />
+              <a href="https://www.frontendmentor.io/profile/little-star45" target="_blank" rel="noopener noreferrer" className="hover:underline"><b>frontendmentor.io</b></a>{' '}
+              <a href="https://www.codewars.com/users/little-star45" target="_blank" rel="noopener noreferrer" className="hover:underline"><b>codewars.com</b></a>{' '}
+              <a href="https://leetcode.com/u/little-star45/" target="_blank" rel="noopener noreferrer" className="hover:underline"><b>leetcode.com</b></a>{' '}
+              <a href="https://play.picoctf.org/users/little_star45" target="_blank" rel="noopener noreferrer" className="hover:underline"><b>picoctf.org</b></a>{' '}
+
+            </article>
+
             <p>See my social media profiles:</p>
             <div className='flex flex-row justify-center list-none gap-8 mb-4'>
               <a className="flex items-center" href="https://www.linkedin.com/in/patrycja-doma%C5%84ska-a45bb4227/" target="_blank" rel="noopener noreferrer">
