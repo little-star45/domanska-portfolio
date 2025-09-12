@@ -9,7 +9,7 @@ const ProjectCard = (props) => {
       <p className="text-xl font-bold">{projectTitle}</p>
       <p className=' overflow-y-auto'>{description}</p>
       <div className='w-full'>
-        <img src={projectThumbnail} alt={`${projectTitle} Thumbnail`} className="w-full h-32 object-cover mt-2 mb-2 rounded-md border-2 border-gray-400"/>
+        <img src={projectThumbnail} alt={`${projectTitle} Thumbnail`} className="w-full h-32 object-cover mt-2 mb-2"/>
         <p className='text-lg font-semibold'>Technologies used:</p>
         <span className="flex flex-row flex-wrap justify-center items-center gap-3 py-2">
           {skills.map((skill, index) => (
