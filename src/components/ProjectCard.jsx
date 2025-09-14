@@ -17,7 +17,7 @@ const ProjectCard = (props) => {
           <TechnologyCard
             key={index}
             icon={Skills[skill].icon}
-            color="#000000"
+            color={document.documentElement.classList.contains("dark") ? "#000000" : Skills[skill].color}
             svgPath={Skills[skill].path}
             viewbox={Skills[skill].viewbox}
             >
