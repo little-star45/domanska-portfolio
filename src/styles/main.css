@@ -3,6 +3,8 @@
 
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 
 @theme{
     --font-family-figtree: 'Figtree', serif;
@@ -13,13 +15,6 @@
 }
 
 @layer components{
-    /* .attribution { 
-        font-size: 11px; text-align: center;
-        padding: 1rem;
-    }
-    .attribution a { 
-        color: hsl(228, 45%, 44%); 
-    } */
 
     .text-section-title{
         font-size: 24px;
@@ -38,4 +33,14 @@
         @apply max-w-1/2 h-auto;
     }
 
+}
+
+:root[data-theme="light"] {
+  background-color: #ffffff;
+  color:#213547;
+}
+
+:root[data-theme="dark"] {
+  background-color: #213547;
+  color: #ffffff;
 }

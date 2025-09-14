@@ -1,4 +1,4 @@
-import { useState, useEffect, use } from 'react'
+import { useState, useEffect} from 'react'
 
 import huskyDog from '../assets/reshot-icon-husky-dog-WY4S8KFRCX.svg'
 
@@ -8,6 +8,7 @@ import ExperienceCard from '../components/ExperienceCard.jsx'
 import Footer from '../components/Footer.jsx'
 import Navbar from '../components/Navbar.jsx'
 import Skills from '../components/Skills.jsx'
+import Credentials from '../components/Credentials.jsx'
 
 import experiences from '../content/experiences.json'
 import projectsData from '../content/projectsShorts.json'
@@ -17,15 +18,36 @@ function Home() {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
+    const [isDarkMode, setIsDarkMode] = useState(localStorage.getItem('theme') === 'dark' ? true : false)
+
+    useEffect(() => {
+        const storedTheme = localStorage.getItem('theme')
+        let darkModeActive = false;
+
+        if (storedTheme=== 'dark' || storedTheme === 'light') {
+            darkModeActive = storedTheme === 'dark' ? true : false
+        } else {
+            darkModeActive = window.matchMedia('(prefers-color-scheme: dark)').matches
+        }
+        setIsDarkMode(darkModeActive)
+
+        document.documentElement.setAttribute('data-theme', darkModeActive ? 'dark' : 'light')
+    }, [])
 
     const modalToggle = () => {
-        setIsModalOpen(!isModalOpen);
+        setIsModalOpen(!isModalOpen)
+    }
+
+    const toggleTheme = () => {
+        setIsDarkMode(!isDarkMode)
+        document.documentElement.setAttribute('data-theme', !isDarkMode ? 'dark' : 'light')
+        localStorage.setItem('theme', !isDarkMode ? 'dark' : 'light')
     }
 
   return (
     <>
-    <Navbar/>
-    <main className='p-4 space-y-6 max-w-screen-xl mx-auto font-family-fira-code scroll-pt-16'>
+    <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode}/>
+    <main className='p-4 space-y-6 max-w-screen-xl mx-auto font-family-fira-code scroll-pt-16 dark:bg-gray-800 dark:text-white'>
     {isModalOpen && 
         <ProjectModal className="fixed inset-0 z-50 backdrop-blur-sm" 
             isOpen={isModalOpen} 
@@ -36,16 +58,16 @@ function Home() {
             />
     }
     <section className='flex justify-center items-center'>
-        <article className='max-w-3/5 text-center space-y-4'>
+        <article className='max-w-full lg:max-w-3/5 text-center space-y-4'>
             <p id='section-about-me' className="text-section-title">About Me</p>
-            <div className='flex flex-col md:flex-row justify-center items-center gap-4'>
-                <p className='text-justify max-w-4/5'>
+            <div className='flex flex-col md:flex-row justify-center items-center'>
+                <p className='text-justify lg:max-w-4/5 max-w-full'>
                     Master's degree in renewable energy, honored at the university's Research Circles conference for work on long-term energy forecasts.
                     Passionate programmer with experience in Python and React - currently focusing on AI integrations and&nbsp;Python-based&nbsp;application development.
                     Former Girl Scout with&nbsp;a&nbsp;background in science tutoring and researcher at AGH University of Science and Technology.
                     After hours,&nbsp;I&nbsp;enjoy teaching programming to kids, cycling, baking sourdough bread,&nbsp;and solving challenges on LeetCode.
                 </p>
-                <div className='hidden md:block w-48 h-48 p-2'>
+                <div className='hidden lg:block w-48 h-48 p-2 ml-2'>
                     <img src={huskyDog} alt="Husky Dog" className="w-full h-full object-cover" />
                 </div>
                 
@@ -56,7 +78,15 @@ function Home() {
                 <li>Bikepacking</li>
                 <li>Python programming</li>
                 <li>Baking sourdough bread</li>
-                <li>literature: SF, fantasy (T. Pratchett/U. Le Guin), popular science</li>
+                <li>
+                    literature: 
+                    <ul className='list-[circle] list-inside ml-5'>
+                        <li>SF, fantasy</li>
+                        <li>T. Pratchett, U. Le Guin</li>
+                        <li>popular science</li>
+                    </ul>
+                </li>   
+
             </ul>
         </article>
         
@@ -72,7 +102,7 @@ function Home() {
     <section id="section-projects" className='space-y-4'>
         <p className="text-section-title text-center">Projects</p>
         <p className="text-center">Here are some of my recent completed projects - for more, please visit my GitHub:</p>
-        <div className='flex flex-row flex-wrap justify-center space-y-6 space-x-6 items-stretch'>
+        <div className='flex flex-wrap justify-center gap-6 items-stretch'>
             {projectsData.map((project, index) => (
             <ProjectCard
                 key={index}
@@ -88,7 +118,7 @@ function Home() {
         </div>
     </section>
     <hr className='border-1 border-gray-200 shadow-gray-700 shadow-lg' />
-    <section id='section-experience' className='space-y-5'>
+    <section id='section-experience' className='space-y-5 mx-6'>
         <p className="text-section-title text-center">Experience</p>
 
             {experiences.map((exp, index) => (
@@ -118,8 +148,9 @@ function Home() {
     <section>
         <p className="text-section-title text-center">Contact</p>
     </section>
-    <Footer id="section-contact"/>
+    <Footer id="section-contact" className="w-full px-0 mx-0"/>
     </main>
+    <Credentials/>    
 </>
   )
 }
