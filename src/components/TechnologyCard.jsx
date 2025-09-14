@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 const TechnologyCard = (props) => {
-  const { title, icon, color, svgPath, viewbox} = props;
+  const { title, icon, color, svgPath, viewbox, level} = props
 
   return (
     <div className={title?"justify-center items-center m-2 p-2 flex flex-col space-y-1":"justify-center items-center"}>
@@ -20,9 +20,15 @@ const TechnologyCard = (props) => {
           
       </div>
       {title && <h2 className="text-m font-semibold break-words whitespace-normal">{title}</h2>}
+
+      {title && level !== undefined && (
+        <div className="w-[3rem] h-2 rounded-full overflow-hidden dark:bg-gray-200 bg-gray-300">
+          <div className="bg-green-500 h-2 rounded-full dark:bg-green-500" style={{ width: `${level}%` }}></div>
+        </div>
+      )}
     </div>
-  );
-};
+  )
+}
 
 
 export default TechnologyCard

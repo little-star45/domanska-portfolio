@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import Skills from '../content/skills.json';
-import TechnologyCard from './TechnologyCard';
+import Skills from '../content/skills.json'
+import TechnologyCard from './TechnologyCard'
 
 const ProjectCard = (props) => {
-  const { projectTitle, description, skills, projectName, toggleModal, setSelectedProject, projectThumbnail } = props;
-  console.log('thumbnail path:', projectThumbnail);
+  const { projectTitle, description, skills, projectName, toggleModal, setSelectedProject, projectThumbnail } = props
+
   return (
     <div className="dark:bg-gray-700 flex flex-col border-3 border-black shadow-[10px_10px_0px_0px_black] p-2 rounded-lg shadow-gray-400 transform hover:scale-105 transition duration-300 justify-between items-center w-96 h-108 text-center">
       <p className="text-xl font-bold">{projectTitle}</p>
@@ -27,7 +27,15 @@ const ProjectCard = (props) => {
         </span>
       </div>
 
-        <button onClick={() => { toggleModal(); setSelectedProject(projectName); }} className='mt-2 px-4 py-2 border-2 border-cyan-800 bg-button-nohover font-bold text-white rounded-lg hover:bg-button-hover hover:scale-102 w-full'>See more...</button>
+        <button
+          onClick={() => { 
+            toggleModal() 
+            setSelectedProject(projectName) 
+          }} 
+          className='mt-2 px-4 py-2 border-2 border-cyan-800 bg-button-nohover font-bold text-white rounded-lg hover:bg-button-hover hover:scale-102 w-full'
+        >
+          See more...
+        </button>
     </div>
   )
 }

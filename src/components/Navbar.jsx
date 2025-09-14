@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useState } from "react"
+import { Menu, X } from "lucide-react"
 
 import LightModeIcon from '../assets/navbar/sun.svg'
 import DarkModeIcon from '../assets/navbar/moon.svg'
@@ -10,7 +10,7 @@ const navLinks = [
   { href: "#section-projects", label: "Projects" },
   { href: "#section-experience", label: "Experience" },
   { href: "#section-contact", label: "Contact" },
-];
+]
 
 const Navbar = (props) => {
   const { toggleTheme, isDarkMode } = props
@@ -60,7 +60,7 @@ const Navbar = (props) => {
       )}
 
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

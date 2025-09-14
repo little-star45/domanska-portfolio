@@ -1,12 +1,12 @@
 import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { useState, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
-import rehypeRaw from 'rehype-raw';
+import rehypeRaw from 'rehype-raw'
 
 const ProjectModal = (props) => {
-    const { projectTitle, markdownPath, isOpen, setIsOpen } = props;
+    const { projectTitle, markdownPath, isOpen, setIsOpen } = props
 
-    const [markdownContent, setMarkdownContent] = useState('');
+    const [markdownContent, setMarkdownContent] = useState('')
 
     useEffect(() => {
     if (markdownPath && isOpen) {
@@ -14,8 +14,6 @@ const ProjectModal = (props) => {
         .then(res => res.text())
         .then(text => setMarkdownContent(text))
         .catch(err => console.error('Error fetching markdown:', err))
-
-        console.log("Fetched markdown from:", markdownPath)
     }
   }, [markdownPath, isOpen])
 

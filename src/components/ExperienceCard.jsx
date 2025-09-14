@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 const ExperienceCard = (props) => {
-  const { date, position, company, technologies, responsibilities } = props;
+  const { date, position, company, technologies, responsibilities } = props
 
   return (
     <div className="dark:bg-gray-700 flex flex-col  border-3 border-black shadow-[10px_10px_0px_0px_black] p-2 rounded-lg shadow-gray-400 transform hover:scale-102 transition duration-300">

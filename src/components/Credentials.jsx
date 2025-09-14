@@ -3,7 +3,7 @@ import React from 'react'
 const Credentials = () => {
 
   return (
-    <div className='text-center shadow-[5px_-2px_2px_5px_rgba(0,0,0,0.1)] dark:max-w-screen-xl mx-auto font-family-fira-code scroll-pt-16 dark:bg-gray-800 dark:text-white'>
+    <div className='text-center shadow-[0px_-6px_0px_0px_rgba(0,0,0,0.1)] dark:max-w-screen-xl mx-auto font-family-fira-code scroll-pt-16 dark:bg-gray-800 dark:text-white'>
             <footer className="bg-gray-700 text-gray-200 text-sm text-center py-4 px-0 mx-0">
               © 2025 Patrycja Domanska. Built with React & TailwindCSS.
               <br></br>

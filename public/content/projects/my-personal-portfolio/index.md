@@ -2,19 +2,34 @@
 
 A personal portfolio built with React (Vite), showcasing projects, experience, and contact in a lightweight, modern format. Deployed on Vercel.
 
-- Live: https://personal-portfolio-vert-two-16.vercel.app
-- Repo: https://github.com/little-star45/domanska-portfolio
+- [Live](https://personal-portfolio-vert-two-16.vercel.app) - live portfolio preview
+- [Repo](https://github.com/little-star45/domanska-portfolio) - GitHub repo
 
 ### Features
 - **Responsive layout** (mobile-first)
+- **Dark/Light mode toggle** with `localStorage` persistence and system preference detection
+- **Project modal** for viewing detailed descriptions from markdown files
+- **Responsive Navbar** with hamburger menu (using lucide-react icons)
+- **Enhanced Skills section** with styled technology icons and dynamic coloring
 - **Sections**: hero, projects, about, contact
 - **Fast loading** thanks to Vite and minimal configuration
 - **ESLint** for code consistency
+- **Skill progress bars** enhances UX by visually showing proficiency levels
+- Improved UI with custom fonts (Figtree, Fira Code), soft shadows, and rounded backgrounds
 
 ### Technologies
-- **React** + **Vite**
+- **React 19** + **Vite**
 - **JavaScript**, **CSS**
+- **TailwindCSS 4.0**
+  - **@tailwindcss/typography** - styling rich text content (headings, lists, paragraphs) automatically
 - **ESLint** (configured in `eslint.config.js`)
+
+#### Npm libraries:
+  - **@headlessui/react** — accessible, unstyled UI components (e.g., modal, transitions)
+  - **lucide-react** — a set of modern icons as React components
+  - **react-markdown** — rendering Markdown content in React
+  - **rehype-raw** — support for raw HTML inside Markdown
+  - **vite-plugin-svgr** — import SVGs as React components
 
 ### Structure (overview)
 - `src/` — app components and assets
@@ -64,7 +79,6 @@ Benefits:
 - **Easy updates**: add/edit projects by changing JSON only
 - **Reusability**: present the same data in multiple components consistently
 - **Separation of concerns**: UI stays focused on rendering, not hard-coded data
-
 
 ### Local Development
 ```bash

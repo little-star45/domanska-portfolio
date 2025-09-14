@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import TechnologyCard from './TechnologyCard';
-import Skills from '../content/skills.json';
+import TechnologyCard from './TechnologyCard'
+import Skills from '../content/skills.json'
 
 const TechnologyWrapper = (props) => {
-  const { skills } = props;
+  const { skills } = props
 
   return (
     <div className='flex flex-row flex-wrap justify-center items-center'>
@@ -15,10 +15,11 @@ const TechnologyWrapper = (props) => {
           color={Skills[skill].color}
           svgPath={Skills[skill].path}
           viewbox={Skills[skill].viewbox}
+          level={Skills[skill].level}
         />
       ))}
     </div>
   )
 }
 
-export default TechnologyWrapper;
+export default TechnologyWrapper

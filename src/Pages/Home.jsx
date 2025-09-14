@@ -16,13 +16,13 @@ import '../styles/main.css'
 
 function Home() {
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedProject, setSelectedProject] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [selectedProject, setSelectedProject] = useState(null)
     const [isDarkMode, setIsDarkMode] = useState(localStorage.getItem('theme') === 'dark' ? true : false)
 
     useEffect(() => {
         const storedTheme = localStorage.getItem('theme')
-        let darkModeActive = false;
+        let darkModeActive = false
 
         if (storedTheme=== 'dark' || storedTheme === 'light') {
             darkModeActive = storedTheme === 'dark' ? true : false
@@ -59,7 +59,7 @@ function Home() {
     }
     <section className='flex justify-center items-center'>
         <article className='max-w-full lg:max-w-3/5 text-center space-y-4'>
-            <p id='section-about-me' className="text-section-title">About Me</p>
+            <p id='section-about-me' className="text-section-title scroll-mt-20">About Me</p>
             <div className='flex flex-col md:flex-row justify-center items-center'>
                 <p className='text-justify lg:max-w-4/5 max-w-full'>
                     Master's degree in renewable energy, honored at the university's Research Circles conference for work on long-term energy forecasts.
@@ -92,14 +92,14 @@ function Home() {
         
     </section>
     <hr className='border-1 border-gray-200 shadow-gray-700 shadow-lg' />
-    <section id='section-skills' className='space-y-4'>
+    <section id='section-skills' className='space-y-4 scroll-mt-20'>
         <p className="text-section-title text-center">Skills</p>
         <div className="flex flex-row justify-between">
             <Skills/>
         </div>
     </section>
     <hr className='border-1 border-gray-200 shadow-gray-700 shadow-lg'/>
-    <section id="section-projects" className='space-y-4'>
+    <section id='section-projects' className='space-y-4 scroll-mt-20'>
         <p className="text-section-title text-center">Projects</p>
         <p className="text-center">Here are some of my recent completed projects - for more, please visit my GitHub:</p>
         <div className='flex flex-wrap justify-center gap-6 items-stretch'>
@@ -118,7 +118,7 @@ function Home() {
         </div>
     </section>
     <hr className='border-1 border-gray-200 shadow-gray-700 shadow-lg' />
-    <section id='section-experience' className='space-y-5 mx-6'>
+    <section id='section-experience' className='space-y-5 mx-6 scroll-mt-20'>
         <p className="text-section-title text-center">Experience</p>
 
             {experiences.map((exp, index) => (
@@ -145,10 +145,10 @@ function Home() {
         ))}
     </section>
     <hr className='border-1 border-gray-200 shadow-gray-700 shadow-lg' />
-    <section>
+    <section id="section-contact" className='space-y-4 scroll-mt-20'>
         <p className="text-section-title text-center">Contact</p>
     </section>
-    <Footer id="section-contact" className="w-full px-0 mx-0"/>
+    <Footer  className="w-full px-0 mx-0 "/>
     </main>
     <Credentials/>    
 </>
