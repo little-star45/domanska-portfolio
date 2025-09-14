@@ -52,7 +52,7 @@
   {
     "projectTitle": "Frontendmentor Exercise Solutions",
     "description": "Solutions to various challenges on Frontendmentor.",
-    "skills": ["JavaScript", "React", "CSS", "HTML", "TailwindCSS"],
+    "skills": ["JavaScript", "React", "CSS", "HTML", "TailwindCSS", "Figma"],
     "projectName": "frontendmentor-exercise-solutions",
     "thumbnail": "/assets/thumbnail/frontendmentor_thumbnail.png",
     "slug": "frontendmentor-exercise-solutions",

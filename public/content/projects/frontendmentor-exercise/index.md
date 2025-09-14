@@ -12,6 +12,7 @@ A collection of small projects/components built as Frontend Mentor challenges. E
 - Vite (dev/build)
 - Tailwind CSS
 - Vanilla JavaScript or React (depending on the project)
+- Figma (UI reference and layout implementation based on provided designs)
 
 ---
 
@@ -34,14 +35,12 @@ A compact article card: thumbnail, category, title, author, and date. Responsive
 - Demo: [Vercel — Blog Preview Card](https://frontendmentor-projects-5yxq.vercel.app/)
 - Code: [Github `/blog-preview-card`](https://github.com/little-star45/frontendmentor_projects/tree/master/blog-preview-card)
 
-Screenshot:
-```html
+#### Screenshot:
 <img
-  src="./blog-preview-card/screenshot.png"
+  src="/content/projects/frontendmentor-exercise/screen-blog-preview.png"
   alt="Blog Preview Card — screenshot"
-  class="w-full max-w-full mx-auto border rounded"
+  class="w-full max-w-3/4 mx-auto border-2 rounded"
 />
-```
 
 ---
 
@@ -51,14 +50,12 @@ A product card with image, price, description, and CTA. Practices layout (grid/f
 - Demo: [Vercel — Product Preview Card](https://frontendmentor-projects-9izq.vercel.app/)
 - Code: [ Github `/product-preview-card-component`](https://github.com/little-star45/frontendmentor_projects/tree/master/product-preview-card-component)
 
-Screenshot:
-```html
+#### Screenshot:
 <img
-  src="./product-preview-card-component/screenshot.png"
+  src="/content/projects/frontendmentor-exercise/screen-product-card.png"
   alt="Product Preview Card Component — screenshot"
-  class="w-full max-w-full mx-auto border rounded"
+  class="w-full max-w-3/4 mx-auto border-2 rounded"
 />
-```
 
 ---
 
@@ -69,14 +66,12 @@ A simple QR code card with title and description. Practices proportions, shadows
 - Demo: [Vercel — QR Code](https://frontendmentor-projects-mauve.vercel.app/)
 - Code: [Github `/qr-code`](https://github.com/little-star45/frontendmentor_projects/tree/master/qr-code)
 
-Screenshot:
-```html
+#### Screenshot:
 <img
-  src="./qr-code/screenshot.png"
+  src="/content/projects/frontendmentor-exercise/screen-qr-code.png"
   alt="QR Code — screenshot"
-  class="w-full max-w-full mx-auto border rounded"
+  class="w-full max-w-3/4 mx-auto border-2 rounded"
 />
-```
 
 ---
 
