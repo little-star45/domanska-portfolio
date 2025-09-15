@@ -6,7 +6,7 @@ const ProjectCard = (props) => {
   const { projectTitle, description, skills, projectName, toggleModal, setSelectedProject, projectThumbnail } = props
 
   return (
-    <div className="dark:bg-gray-700 flex flex-col border-3 border-black shadow-[10px_10px_0px_0px_black] p-2 rounded-lg shadow-gray-400 transform hover:scale-105 transition duration-300 justify-between items-center w-96 h-108 text-center">
+    <div className="h-contrast:bg-black h-contrast:border-yellow-300 dark:bg-gray-700 flex flex-col border-3 border-black shadow-[10px_10px_0px_0px_black] p-2 rounded-lg shadow-gray-400 transform hover:scale-105 transition duration-300 justify-between items-center w-96 h-108 text-center">
       <p className="text-xl font-bold">{projectTitle}</p>
       <p className=' overflow-y-auto'>{description}</p>
       <div className='w-full'>

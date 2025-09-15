@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa"
 
 const TechnologyCard = (props) => {
@@ -8,6 +8,20 @@ const TechnologyCard = (props) => {
   var halfStarr = ((level/16/2)-fullStarr) > 0.45 ? 1 : 0
   var emptyStarr = 3 - fullStarr - halfStarr
 
+  const [isDark, setIsDark] = useState(false)
+
+  useEffect(() => {
+  const checkTheme = () => {
+    setIsDark(document.documentElement.classList.contains('dark'));
+  };
+  checkTheme(); // sprawdzamy przy mount
+  window.addEventListener('themeChange', checkTheme); // jeśli masz custom event
+  return () => window.removeEventListener('themeChange', checkTheme);
+}, [])
+
+  console.log(isDark)
+  console.log(document.documentElement.classList)
+
   return (
     <div className={title?"justify-center items-center m-2 p-2 flex flex-col space-y-1":"justify-center items-center"}>
       <div className='dark:bg-gray-100 dark:rounded-full p-2 dark:outline-2 dark:outline-gray-800'>
@@ -16,7 +30,7 @@ const TechnologyCard = (props) => {
           xmlns='http://www.w3.org/2000/svg'
           className={title?"w-8 h-8":"w-6 h-6"}
           stroke={color}
-          fill={color}
+          fill={isDark ? "#f2e308" : color}
           strokeWidth="0.03"
           viewBox={viewbox}
           >

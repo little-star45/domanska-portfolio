@@ -3,8 +3,9 @@
 
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant h-contrast (&:where([data-theme=h-contrast], [data-theme=h-contrast] *));
 
 @theme{
     --font-family-figtree: 'Figtree', serif;
@@ -43,4 +44,9 @@
 :root[data-theme="dark"] {
   background-color: #213547;
   color: #ffffff;
+}
+
+:root[data-theme="h-contrast"] {
+  background-color: #000000;
+  color: #f9f004;
 }

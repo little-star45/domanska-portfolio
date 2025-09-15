@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div className='text-center space-y-3'>
             <p>Thank you for visiting my portfolio!</p>
-            <article className="p-4 text-center mx-auto max-w-1/2 bg-gray-200 rounded-lg relative overflow-hidden dark:text-gray-800">
+            <article className="h-contrast:bg-black h-contrast:border-yellow-300 h-contrast:border-2 p-4 text-center mx-auto max-w-1/2 bg-gray-200 rounded-lg relative overflow-hidden dark:text-gray-800">
 
               My profiles on CTF sites, Leetcode, and so on:
               <br />

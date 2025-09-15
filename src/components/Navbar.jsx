@@ -15,11 +15,11 @@ const navLinks = [
 ]
 
 const Navbar = (props) => {
-  const { toggleTheme, isDarkMode } = props
+  const { toggleTheme, isDarkMode, toggleContrast, isContrastMode } = props
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="shadow-gray-400 shadow-[0_4px_2px_-1px_rgba(0,0,0,0.1)] sticky top-0 bg-white z-10 dark:text-[#213547]">
+    <nav className="shadow-gray-400 shadow-[0_4px_2px_-1px_rgba(0,0,0,0.1)] sticky top-0 bg-white z-10 dark:text-[#213547] h-contrast:bg-black">
 
       <div className="flex justify-between items-center p-4 text-section-title">
         <h1 className="text-lg  font-semibold">
@@ -37,7 +37,7 @@ const Navbar = (props) => {
         <button className="lg:hidden text-black" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
-        <button onClick={toggleTheme} className="border-2 rounded-full text-black hover:bg-gray-300">
+        <button onClick={toggleTheme} className="border-2 rounded-full text-black hover:bg-gray-300 h-contrast:bg-yellow-300 h-contrast:hover:bg-amber-500">
           <img 
             src={isDarkMode ? DarkModeIcon : LightModeIcon} 
             alt="theme icon" className="w-6 h-6 m-1" 
@@ -45,9 +45,9 @@ const Navbar = (props) => {
             // strokeWidth={4}
           />
         </button>
-        <button onClick={toggleTheme} className="border-2 rounded-full text-black hover:bg-yellow-300">
+        <button onClick={toggleContrast} className="border-2 rounded-full text-black hover:bg-yellow-300 h-contrast:bg-yellow-300 h-contrast:hover:bg-amber-500">
           <img 
-            src={isDarkMode ? EyeClosedIcon : EyeOpenIcon}
+            src={isContrastMode ? EyeClosedIcon : EyeOpenIcon}
             alt="theme icon" className="w-6 h-6 m-1"
             // stroke="#0f283a"
             // strokeWidth={4}

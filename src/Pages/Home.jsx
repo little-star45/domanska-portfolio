@@ -18,35 +18,49 @@ function Home() {
 
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [selectedProject, setSelectedProject] = useState(null)
+
     const [isDarkMode, setIsDarkMode] = useState(localStorage.getItem('theme') === 'dark' ? true : false)
+    const [isContrastMode, setIsContrastMode] = useState(localStorage.getItem('contrast-mode') === 'h-contrast' ? true : false)
 
     useEffect(() => {
         const storedTheme = localStorage.getItem('theme')
-        let darkModeActive = false
+        const storedContrast = localStorage.getItem('contrast-mode')
+        let darkModeActive
 
-        if (storedTheme=== 'dark' || storedTheme === 'light') {
-            darkModeActive = storedTheme === 'dark' ? true : false
-        } else {
-            darkModeActive = window.matchMedia('(prefers-color-scheme: dark)').matches
-        }
+        darkModeActive = storedTheme === 'dark' ? true : storedTheme === 'light' ? false : window.matchMedia('(prefers-color-scheme: dark)').matches
+        
         setIsDarkMode(darkModeActive)
+        setIsContrastMode(storedContrast === 'h-contrast')
 
-        document.documentElement.setAttribute('data-theme', darkModeActive ? 'dark' : 'light')
+        updateTheme(darkModeActive, storedContrast === 'h-contrast')
     }, [])
 
     const modalToggle = () => {
         setIsModalOpen(!isModalOpen)
     }
 
+    const updateTheme = (darkMode, contrastMode) => {
+        document.documentElement.setAttribute('data-theme', contrastMode ? 'h-contrast': darkMode ? 'dark' : 'light')
+    }   
+
     const toggleTheme = () => {
+        setIsContrastMode(false)
         setIsDarkMode(!isDarkMode)
-        document.documentElement.setAttribute('data-theme', !isDarkMode ? 'dark' : 'light')
+        updateTheme(!isDarkMode, false)
+        localStorage.removeItem('contrast-mode')
         localStorage.setItem('theme', !isDarkMode ? 'dark' : 'light')
+    }
+
+    const toggleContrast = () => {
+        setIsContrastMode(!isContrastMode)
+        updateTheme(isDarkMode, !isContrastMode)
+
+        !isContrastMode ? localStorage.setItem('contrast-mode', 'h-contrast') : localStorage.removeItem('contrast-mode')
     }
 
   return (
     <>
-    <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode}/>
+    <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} toggleContrast={toggleContrast} isContrastMode={isContrastMode}/>
     <main className='p-4 space-y-6 max-w-screen-xl mx-auto font-family-fira-code scroll-pt-16 dark:bg-gray-800 dark:text-white'>
     {isModalOpen && 
         <ProjectModal className="fixed inset-0 z-50 backdrop-blur-sm" 
