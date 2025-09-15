@@ -3,6 +3,8 @@ import { Menu, X } from "lucide-react"
 
 import LightModeIcon from '../assets/navbar/sun.svg'
 import DarkModeIcon from '../assets/navbar/moon.svg'
+import EyeOpenIcon from '../assets/navbar/eyeOpen.svg'
+import EyeClosedIcon from '../assets/navbar/eyeClose.svg'
 
 const navLinks = [
   { href: "#section-about-me", label: "About me" },
@@ -42,7 +44,15 @@ const Navbar = (props) => {
             // stroke="#0f283a" 
             // strokeWidth={4}
           />
-          </button>
+        </button>
+        <button onClick={toggleTheme} className="border-2 rounded-full text-black hover:bg-yellow-300">
+          <img 
+            src={isDarkMode ? EyeClosedIcon : EyeOpenIcon}
+            alt="theme icon" className="w-6 h-6 m-1"
+            // stroke="#0f283a"
+            // strokeWidth={4}
+          />
+        </button>
         
         </section>
       </div>

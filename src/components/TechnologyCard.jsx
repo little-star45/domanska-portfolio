@@ -1,7 +1,12 @@
 import { useState } from 'react'
+import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa"
 
 const TechnologyCard = (props) => {
   const { title, icon, color, svgPath, viewbox, level} = props
+
+  var fullStarr = Math.floor(level/16/2)
+  var halfStarr = ((level/16/2)-fullStarr) > 0.45 ? 1 : 0
+  var emptyStarr = 3 - fullStarr - halfStarr
 
   return (
     <div className={title?"justify-center items-center m-2 p-2 flex flex-col space-y-1":"justify-center items-center"}>
@@ -19,11 +24,21 @@ const TechnologyCard = (props) => {
           </svg>
           
       </div>
-      {title && <h2 className="text-m font-semibold break-words whitespace-normal">{title}</h2>}
+      {title && <h2 className="text-m font-semibold break-words whitespace-pre-line">{title}</h2>}
 
       {title && level !== undefined && (
-        <div className="w-[3rem] h-2 rounded-full overflow-hidden dark:bg-gray-200 bg-gray-300">
-          <div className="bg-green-500 h-2 rounded-full dark:bg-green-500" style={{ width: `${level}%` }}></div>
+        <div className="flex star">
+
+          {Array.from({ length: fullStarr }, (_, i) => (
+            <FaStar className='text-yellow-500' key={i} />
+          ))}
+          {halfStarr ? (
+            <FaStarHalfAlt className='text-yellow-500' />
+          ) : null}
+          {Array.from({ length: emptyStarr }, (_, i) => (
+            <FaRegStar className='text-yellow-500' key={i} />
+          ))}
+
         </div>
       )}
     </div>

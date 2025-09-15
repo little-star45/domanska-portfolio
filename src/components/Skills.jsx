@@ -10,7 +10,7 @@ const Skills = () => {
                 <h2 className="text-m font-semibold">{category}</h2>
                     <TechnologyWrapper
                         skills={skills}
-                    />  
+                    />
                 </div>
         ))}
         </div>
