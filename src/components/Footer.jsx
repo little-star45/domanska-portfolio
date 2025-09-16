@@ -23,15 +23,15 @@ const Footer = () => {
 
             <p>See my social media profiles:</p>
             <div className='flex flex-row justify-center list-none gap-8 mb-4'>
-              <a className="h-contrast:bg-yellow-h-contrast h-contrast:rounded-full" href="https://www.linkedin.com/in/patrycja-doma%C5%84ska-a45bb4227/" target="_blank" rel="noopener noreferrer">
-                <img src={linkedinIcon} alt="Linkedin" className="w-8 h-8 mr-2 dark:bg-white dark:rounded-full dark:border-1" />
+              <a className="h-contrast:bg-yellow-h-contrast h-contrast:rounded-full w-8 h-8 h-contrast:outline-2" href="https://www.linkedin.com/in/patrycja-doma%C5%84ska-a45bb4227/" target="_blank" rel="noopener noreferrer">
+                <img src={linkedinIcon} alt="Linkedin" className="w-8 h-8 mr-2 dark:bg-white dark:rounded-full dark:border-2" />
               </a>
-              <a className="h-contrast:bg-yellow-h-contrast h-contrast:rounded-full" href="https://github.com/little-star45" target="_blank" rel="noopener noreferrer">
-                <img src={githubIcon} alt="Github" className="w-8 h-8 mr-2 dark:bg-white dark:rounded-full dark:border-1" />
+              <a className="h-contrast:bg-yellow-h-contrast h-contrast:rounded-full w-8 h-8 h-contrast:outline-2" href="https://github.com/little-star45" target="_blank" rel="noopener noreferrer">
+                <img src={githubIcon} alt="Github" className="w-8 h-8 mr-2 dark:bg-white dark:rounded-full dark:border-2" />
  
               </a>
-              <a className="h-contrast:bg-yellow-h-contrast h-contrast:rounded-full cursor-default" href="mailto:youremail@example.com">
-                <img src={emailIcon} alt="Email" className="w-8 h-8 mr-2 dark:bg-white dark:rounded-full dark:border-1" />
+              <a className="h-contrast:bg-yellow-h-contrast h-contrast:rounded-full cursor-default w-8 h-8 h-contrast:outline-2" href="mailto:youremail@example.com">
+                <img src={emailIcon} alt="Email" className="w-8 h-8 mr-2 dark:bg-white dark:rounded-full dark:border-2" />
               </a>
             </div>
             <p>If you'd like to get in touch, feel free to reach out via Linkedin.</p>
