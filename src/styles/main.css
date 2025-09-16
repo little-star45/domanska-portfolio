@@ -10,9 +10,20 @@
 @theme{
     --font-family-figtree: 'Figtree', serif;
     --font-family-fira-code: 'Fira Code', monospace;
+
     --color-button-nohover: var(--color-cyan-600);
     --color-button-hover: var(--color-cyan-700);
-    /* --color-button-hover: hsl(47, 88%, 53%); */
+    --color-button-border: var(--color-cyan-800);
+
+    --color-lite: #ffffff;
+    --color-main-dark: #213547;
+    --color-dark: var(--color-gray-700);
+    --color-h-contrast: #000000;
+
+    --color-text-lite: #213547;
+    --color-text-dark: #ffffff;
+
+    --color-yellow-h-contrast: #f9f004;
 }
 
 @layer components{
@@ -34,48 +45,56 @@
         @apply max-w-1/2 h-auto;
     }
 
+    /* .h-contrast-border{
+        border: 2px solid var(--color-yellow-h-contrast);
+    } */
+
 }
 
 :root[data-theme="light"] {
-  background-color: #ffffff;
-  color:#213547;
+  background-color: var(--color-lite);
+  color: var(--color-text-lite);
 }
 
 :root[data-theme="dark"] {
-  background-color: #213547;
-  color: #ffffff;
+  background-color: var(--color-main-dark);
+  color: var(--color-text-dark);
 
   pre {
     background-color: #000000;
     /* border: #ffffff 2px solid; */
   }
 
-  .prose :is(a, h1, h2, h3, h4, pre, p, li, strong, code) {
-    color: #ffffff;
+  .prose :is(a, h1, h2, h3, h4, pre, p, li, ::marker, strong, code) {
+    color: var(--color-text-dark);
+  }
+
+  .prose li::marker {
+    color: var(--color-text-dark);
   }
 
 }
 
 :root[data-theme="h-contrast"] {
-  background-color: #000000;
-  color: #f9f004;
+  background-color: var(--color-h-contrast);
+  color: var(--color-text-h-contrast);
 
   img {
     filter: grayscale(100%) contrast(150%) brightness(120%);
   }
 
   h1, h2, h3, h4, a, pre, p, li, code, strong {
-    color: #f9f004;
+    color: var(--color-yellow-h-contrast);
   }
 
   pre {
-    color: #f9f004;
+    color: var(--color-yellow-h-contrast);
     background-color: #000000;
-    border: #f9f004 2px solid;
+    border: var(--color-yellow-h-contrast) 2px solid;
   }
 
   button {
     color: #000000;
-    background-color: #f9f004;
+    background-color: var(--color-yellow-h-contrast);
   }
 }

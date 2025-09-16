@@ -4,7 +4,7 @@ const ExperienceCard = (props) => {
   const { date, position, company, technologies, responsibilities } = props
 
   return (
-    <div className="h-contrast:bg-black h-contrast:border-yellow-300 dark:bg-gray-700 flex flex-col  border-3 border-black shadow-[10px_10px_0px_0px_black] p-2 rounded-lg shadow-gray-400 transform hover:scale-102 transition duration-300">
+    <div className="h-contrast:bg-h-contrast h-contrast:border-yellow-h-contrast dark:bg-dark flex flex-col  border-3 border-black shadow-[10px_10px_0px_0px_black] p-2 rounded-lg shadow-gray-400 transform hover:scale-102 transition duration-300">
         <p className='font-bold'>{date}: {position} at {company}</p>
         <div className='flex flex-col gap-2'>
           <p><span className='font-semibold'>Used technologies: </span> {technologies.join(', ')}</p>

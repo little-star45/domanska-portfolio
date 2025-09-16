@@ -9,7 +9,7 @@ const ProjectCard = (props) => {
   const { isContrastMode} = useTheme()
 
   return (
-    <div className="h-contrast:bg-black h-contrast:border-yellow-300 dark:bg-gray-700 flex flex-col border-3 border-black shadow-[10px_10px_0px_0px_black] p-2 rounded-lg shadow-gray-400 transform hover:scale-105 transition duration-300 justify-between items-center w-96 h-108 text-center">
+    <div className="h-contrast:bg-h-contrast h-contrast:border-yellow-h-contrast dark:bg-dark flex flex-col border-3 border-black shadow-[10px_10px_0px_0px_black] p-2 rounded-lg shadow-gray-400 transform hover:scale-105 transition duration-300 justify-between items-center w-96 h-108 text-center">
       <p className="text-xl font-bold">{projectTitle}</p>
       <p className=' overflow-y-auto'>{description}</p>
       <div className='w-full'>
@@ -33,7 +33,7 @@ const ProjectCard = (props) => {
             toggleModal() 
             setSelectedProject(projectName) 
           }} 
-          className='h-contrast:bg-black h-contrast:hover:bg-black h-contrast:text-yellow-300 h-contrast:border-yellow-300 mt-2 px-4 py-2 border-2 border-cyan-800 bg-button-nohover font-bold text-white rounded-lg hover:bg-button-hover hover:scale-102 w-full'
+          className='h-contrast:bg-h-contrast h-contrast:border-yellow-h-contrast mt-2 px-4 py-2 border-2 border-button-border bg-button-nohover font-bold text-white rounded-lg hover:bg-button-hover hover:scale-102 w-full'
         >
           See more...
         </button>

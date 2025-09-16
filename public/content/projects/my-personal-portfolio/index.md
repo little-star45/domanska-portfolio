@@ -10,12 +10,26 @@ A personal portfolio built with React (Vite), showcasing projects, experience, a
 - **Dark/Light mode toggle** with `localStorage` persistence and system preference detection
 - **Project modal** for viewing detailed descriptions from markdown files
 - **Responsive Navbar** with hamburger menu (using lucide-react icons)
-- **Enhanced Skills section** with styled technology icons and dynamic coloring
+- **Enhanced Skills section** with styled technology icons and dynamic coloring based on contrast mode
 - **Sections**: hero, projects, about, contact
 - **Fast loading** thanks to Vite and minimal configuration
 - **ESLint** for code consistency
 - **Skill progress bars** enhances UX by visually showing proficiency levels
 - Improved UI with custom fonts (Figtree, Fira Code), soft shadows, and rounded backgrounds
+- **High-contrast mode** for better accessibility (h-contrast variant)
+- **Persistent theme & contrast** settings using localStorage
+- **Custom Tailwind CSS variables** for colors, fonts, and themes
+- React **useContext** + **custom hook** for centralized theme & contrast state management
+
+####  Advanced Tailwind Features
+- **Custom fonts:** Figtree and Fira Code, applied globally using CSS variables.
+- **Theme variables** To set colors once globally. 
+- **Custom theme variants:** `dark` and `h-contrast`.   
+- **Theme-aware utility classes:** e.g. for quick component adaptation to the theme.
+- **High-contrast mode:** Dynamic colors, plus image filters, enhancing accessibility for visually impaired users.
+- **Custom Tailwind components:** Consistent headings, text and custom shadows.  
+- **Enhanced typography:** `@tailwindcss/typography` plugin with theme-aware styles for `prose`, links, headings, and list markers.  
+- **CSS variables integration:** Colors, backgrounds, and fonts controlled via CSS variables for easy theme management and updates.  
 
 ### Technologies
 - **React 19** + **Vite**
