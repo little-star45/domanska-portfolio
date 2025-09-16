@@ -25,7 +25,7 @@ const Navbar = () => {
     <nav className="shadow-gray-400 shadow-[0_4px_2px_-1px_rgba(0,0,0,0.1)] sticky top-0 bg-white z-10 dark:text-[#213547] h-contrast:bg-h-contrast">
 
       <div className="flex justify-between items-center p-4 text-section-title">
-        <h1 className="text-lg  font-semibold">
+        <h1 className="text-2xl  font-bold">
           Patrycja Domańska - portfolio
         </h1>
 

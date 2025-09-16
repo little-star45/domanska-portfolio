@@ -23,6 +23,13 @@ function Home() {
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [selectedProject, setSelectedProject] = useState(null)
 
+    const [sliderIndex, setSliderIndex] = useState(0);
+    
+    const projectsPerPage = 3
+    const pageCount = Math.ceil(projectsData.length / projectsPerPage)
+    const projectsPages = Array.from({ length: pageCount }, (_, i) => i)
+    const visibleProjects = projectsData.slice(sliderIndex, sliderIndex + projectsPerPage)
+
     useEffect(() => {
         const storedTheme = localStorage.getItem('theme')
         const storedContrast = localStorage.getItem('contrast-mode')
@@ -40,7 +47,7 @@ function Home() {
   return (
     <>
     <Navbar/>
-    <main className='p-4 space-y-6 max-w-screen-xl mx-auto font-family-fira-code scroll-pt-16 dark:bg-gray-800 dark:text-white'>
+    <main className='p-4 space-y-6 max-w-screen-xl mx-auto font-family-fira-code scroll-pt-16 dark:bg-gray-800 dark:text-white '>
     {isModalOpen && 
         <ProjectModal className="fixed inset-0 z-50 backdrop-blur-sm" 
             isOpen={isModalOpen} 
@@ -96,7 +103,7 @@ function Home() {
         <p className="text-section-title text-center">Projects</p>
         <p className="text-center">Here are some of my recent completed projects - for more, please visit my GitHub:</p>
         <div className='flex flex-wrap justify-center gap-6 items-stretch'>
-            {projectsData.map((project, index) => (
+            {visibleProjects.map((project, index) => (
             <ProjectCard
                 key={index}
                 projectTitle={project.projectTitle}
@@ -108,7 +115,20 @@ function Home() {
                 setSelectedProject={setSelectedProject}
             />
             ))}
+            
         </div>
+        <div className="flex justify-center gap-2 mt-6">
+            {projectsPages.map((page) => (
+                <span
+                key={page}
+                className={
+                    `w-4 h-4 rounded-full cursor-pointer transition-all 
+                    ${page === Math.floor(sliderIndex / projectsPerPage)? 'bg-yellow-500 scale-125': 'bg-gray-400'}`
+                }
+                onClick={() => setSliderIndex(page * projectsPerPage)}
+                ></span>
+            ))}
+            </div>
     </section>
     <hr className='border-1 border-gray-200 shadow-gray-700 shadow-lg' />
     <section id='section-experience' className='space-y-5 mx-6 scroll-mt-20'>

@@ -28,7 +28,7 @@ const ProjectModal = (props) => {
                 <div className="prose max-h-156 overflow-y-auto p-6 overflow-x-hidden max-w-full">
                     <ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdownContent}</ReactMarkdown>
                     <div className="flex gap-4 justify-center">
-                        <button className='font-bold max-w-8/9 border-2 bg-button-nohover border-button-border rounded-lg py-2 hover:bg-button-hover text-white w-full hover:scale-102' onClick={() => setIsOpen(false)}>Ok</button>
+                        <button className='font-bold max-w-8/9 border-2 bg-button-nohover border-button-border rounded-lg py-2 hover:bg-button-hover h-contrast:border-yellow-h-contrast text-white w-full hover:scale-102' onClick={() => setIsOpen(false)}>Ok</button>
                     </div>
                 </div>
                     
