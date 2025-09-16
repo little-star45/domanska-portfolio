@@ -18,7 +18,7 @@ import { useTheme } from '../hooks/useTheme.jsx'
 
 function Home() {
 
-    const { updateTheme } = useTheme()
+    const { isDarkMode, updateTheme } = useTheme()
 
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [selectedProject, setSelectedProject] = useState(null)
@@ -67,27 +67,36 @@ function Home() {
                     Former Girl Scout with&nbsp;a&nbsp;background in science tutoring and researcher at AGH University of Science and Technology.
                     After hours,&nbsp;I&nbsp;enjoy teaching programming to kids, cycling, baking sourdough bread,&nbsp;and solving challenges on LeetCode.
                 </p>
+                
                 <div className='hidden lg:block w-48 h-48 p-2 ml-2'>
                     <img src={huskyDog} alt="Husky Dog" className="w-full h-full object-cover" />
                 </div>
                 
             </div>
-             
-            <p className='text-left font-semibold'>Some of my hobbies include:</p>
-            <ul className='list-disc list-inside text-justify'>
-                <li>Bikepacking</li>
-                <li>Python programming</li>
-                <li>Baking sourdough bread</li>
-                <li>
-                    literature: 
-                    <ul className='list-[circle] list-inside ml-5'>
-                        <li>SF, fantasy</li>
-                        <li>T. Pratchett, U. Le Guin</li>
-                        <li>popular science</li>
+            <div className='flex flex-col md:flex-row justify-between items-center gap-6'>
+                <div>
+                    <p className='text-left font-semibold'>Some of my hobbies include:</p>
+                        <ul className='list-disc list-inside text-justify'>
+                            <li>Bikepacking</li>
+                            <li>Python programming</li>
+                            <li>Baking sourdough bread</li>
+                            <li>
+                                literature: 
+                                <ul className='list-[circle] list-inside ml-5'>
+                                    <li>SF, fantasy</li>
+                                    <li>T. Pratchett, U. Le Guin</li>
+                                    <li>popular science</li>
                     </ul>
                 </li>   
-
             </ul>
+                </div>
+            
+            <img 
+                src={`https://github-readme-stats.vercel.app/api/top-langs/?username=little-star45&layout=compact&theme=${isDarkMode ? 'dark' : 'grey'}&custom_title=My Tech Stack by Usage`} 
+                alt="Top Languages"
+            />
+             </div>
+            
         </article>
         
     </section>
