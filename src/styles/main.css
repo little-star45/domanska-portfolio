@@ -44,9 +44,38 @@
 :root[data-theme="dark"] {
   background-color: #213547;
   color: #ffffff;
+
+  pre {
+    background-color: #000000;
+    /* border: #ffffff 2px solid; */
+  }
+
+  .prose :is(a, h1, h2, h3, h4, pre, p, li, strong, code) {
+    color: #ffffff;
+  }
+
 }
 
 :root[data-theme="h-contrast"] {
   background-color: #000000;
   color: #f9f004;
+
+  img {
+    filter: grayscale(100%) contrast(150%) brightness(120%);
+  }
+
+  h1, h2, h3, h4, a, pre, p, li, code, strong {
+    color: #f9f004;
+  }
+
+  pre {
+    color: #f9f004;
+    background-color: #000000;
+    border: #f9f004 2px solid;
+  }
+
+  button {
+    color: #000000;
+    background-color: #f9f004;
+  }
 }

@@ -14,13 +14,14 @@ import experiences from '../content/experiences.json'
 import projectsData from '../content/projectsShorts.json'
 import '../styles/main.css'
 
+import { useTheme } from '../hooks/useTheme.jsx'
+
 function Home() {
+
+    const { updateTheme } = useTheme()
 
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [selectedProject, setSelectedProject] = useState(null)
-
-    const [isDarkMode, setIsDarkMode] = useState(localStorage.getItem('theme') === 'dark' ? true : false)
-    const [isContrastMode, setIsContrastMode] = useState(localStorage.getItem('contrast-mode') === 'h-contrast' ? true : false)
 
     useEffect(() => {
         const storedTheme = localStorage.getItem('theme')
@@ -28,9 +29,6 @@ function Home() {
         let darkModeActive
 
         darkModeActive = storedTheme === 'dark' ? true : storedTheme === 'light' ? false : window.matchMedia('(prefers-color-scheme: dark)').matches
-        
-        setIsDarkMode(darkModeActive)
-        setIsContrastMode(storedContrast === 'h-contrast')
 
         updateTheme(darkModeActive, storedContrast === 'h-contrast')
     }, [])
@@ -39,28 +37,9 @@ function Home() {
         setIsModalOpen(!isModalOpen)
     }
 
-    const updateTheme = (darkMode, contrastMode) => {
-        document.documentElement.setAttribute('data-theme', contrastMode ? 'h-contrast': darkMode ? 'dark' : 'light')
-    }   
-
-    const toggleTheme = () => {
-        setIsContrastMode(false)
-        setIsDarkMode(!isDarkMode)
-        updateTheme(!isDarkMode, false)
-        localStorage.removeItem('contrast-mode')
-        localStorage.setItem('theme', !isDarkMode ? 'dark' : 'light')
-    }
-
-    const toggleContrast = () => {
-        setIsContrastMode(!isContrastMode)
-        updateTheme(isDarkMode, !isContrastMode)
-
-        !isContrastMode ? localStorage.setItem('contrast-mode', 'h-contrast') : localStorage.removeItem('contrast-mode')
-    }
-
   return (
     <>
-    <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} toggleContrast={toggleContrast} isContrastMode={isContrastMode}/>
+    <Navbar/>
     <main className='p-4 space-y-6 max-w-screen-xl mx-auto font-family-fira-code scroll-pt-16 dark:bg-gray-800 dark:text-white'>
     {isModalOpen && 
         <ProjectModal className="fixed inset-0 z-50 backdrop-blur-sm" 

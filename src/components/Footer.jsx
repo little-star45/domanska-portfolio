@@ -23,15 +23,15 @@ const Footer = () => {
 
             <p>See my social media profiles:</p>
             <div className='flex flex-row justify-center list-none gap-8 mb-4'>
-              <a className="flex items-center" href="https://www.linkedin.com/in/patrycja-doma%C5%84ska-a45bb4227/" target="_blank" rel="noopener noreferrer">
+              <a className="h-contrast:bg-yellow-500 h-contrast:rounded-full" href="https://www.linkedin.com/in/patrycja-doma%C5%84ska-a45bb4227/" target="_blank" rel="noopener noreferrer">
                 <img src={linkedinIcon} alt="Linkedin" className="w-8 h-8 mr-2 dark:bg-white dark:rounded-full dark:border-1" />
                 {/* <span className="text-black font-bold hover:text-gray-700">Linkedin</span> */}
               </a>
-              <a className="flex items-center" href="https://github.com/little-star45" target="_blank" rel="noopener noreferrer">
+              <a className="h-contrast:bg-yellow-500 h-contrast:rounded-full" href="https://github.com/little-star45" target="_blank" rel="noopener noreferrer">
                 <img src={githubIcon} alt="Github" className="w-8 h-8 mr-2 dark:bg-white dark:rounded-full dark:border-1" />
                 {/* <span className="text-black font-bold hover:text-gray-700">Github</span> */}
               </a>
-              <a className="flex items-center cursor-default" href="mailto:youremail@example.com">
+              <a className="h-contrast:bg-yellow-500 h-contrast:rounded-full cursor-default" href="mailto:youremail@example.com">
                 <img src={emailIcon} alt="Email" className="w-8 h-8 mr-2 dark:bg-white dark:rounded-full dark:border-1" />
                 {/* <span className="text-gray-700 font-bold hover:text-gray-700 cursor-default">Email</span> */}
               </a>

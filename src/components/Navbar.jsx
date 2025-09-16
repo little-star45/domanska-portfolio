@@ -6,6 +6,8 @@ import DarkModeIcon from '../assets/navbar/moon.svg'
 import EyeOpenIcon from '../assets/navbar/eyeOpen.svg'
 import EyeClosedIcon from '../assets/navbar/eyeClose.svg'
 
+import { useTheme } from '../hooks/useTheme.jsx'
+
 const navLinks = [
   { href: "#section-about-me", label: "About me" },
   { href: "#section-skills", label: "Skills" },
@@ -14,8 +16,9 @@ const navLinks = [
   { href: "#section-contact", label: "Contact" },
 ]
 
-const Navbar = (props) => {
-  const { toggleTheme, isDarkMode, toggleContrast, isContrastMode } = props
+const Navbar = () => {
+  const { toggleTheme, isDarkMode, toggleContrast, isContrastMode } = useTheme()
+
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -30,14 +33,14 @@ const Navbar = (props) => {
           <ul className="hidden lg:flex flex-row gap-6 list-none">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="hover:text-gray-600"> {link.label}</a>
+              <a href={link.href} className="hover:text-gray-600 h-contrast:hover:text-yellow-300"> {link.label}</a>
             </li>
           ))}
         </ul>
-        <button className="lg:hidden text-black" onClick={() => setIsOpen(!isOpen)}>
+        <button className="lg:hidden text-black h-contrast:text-yellow-400 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
-        <button onClick={toggleTheme} className="border-2 rounded-full text-black hover:bg-gray-300 h-contrast:bg-yellow-300 h-contrast:hover:bg-amber-500">
+        <button onClick={toggleTheme} className={`cursor-pointer border-2 rounded-full text-black ${isDarkMode ? 'bg-gray-300 hover:bg-white' : 'bg-white hover:bg-gray-300 '} h-contrast:bg-yellow-300 h-contrast:hover:bg-amber-500`}>
           <img 
             src={isDarkMode ? DarkModeIcon : LightModeIcon} 
             alt="theme icon" className="w-6 h-6 m-1" 
@@ -45,7 +48,7 @@ const Navbar = (props) => {
             // strokeWidth={4}
           />
         </button>
-        <button onClick={toggleContrast} className="border-2 rounded-full text-black hover:bg-yellow-300 h-contrast:bg-yellow-300 h-contrast:hover:bg-amber-500">
+        <button onClick={toggleContrast} className="cursor-pointer border-2 rounded-full text-black hover:bg-yellow-300 h-contrast:bg-yellow-300 h-contrast:hover:bg-amber-500">
           <img 
             src={isContrastMode ? EyeClosedIcon : EyeOpenIcon}
             alt="theme icon" className="w-6 h-6 m-1"
@@ -58,10 +61,10 @@ const Navbar = (props) => {
       </div>
 
       {isOpen && (
-        <ul className="lg:hidden flex flex-col items-center gap-4 pb-4 bg-white shadow-inner text-section-title pt-4">
+        <ul className="lg:hidden flex flex-col items-center gap-4 pb-4 bg-white shadow-inner text-section-title pt-4 h-contrast:bg-black h-contrast:border-yellow-300 h-contrast:border-4 h-contrast:rounded-b-lg">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="hover:text-gray-600 " onClick={() => setIsOpen(false)}>
+              <a href={link.href} className="hover:text-gray-600 h-contrast:hover:text-yellow-300" onClick={() => setIsOpen(false)}>
                 {link.label}
               </a>
             </li>
