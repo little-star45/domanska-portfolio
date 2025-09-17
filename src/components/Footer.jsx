@@ -30,7 +30,7 @@ const Footer = () => {
                 <img src={githubIcon} alt="Github" className="w-8 h-8 mr-2 dark:bg-white dark:rounded-full dark:border-2" />
  
               </a>
-              <a className="h-contrast:bg-yellow-h-contrast h-contrast:rounded-full cursor-default w-8 h-8 h-contrast:outline-2" href="mailto:youremail@example.com">
+              <a className="h-contrast:bg-yellow-h-contrast h-contrast:rounded-full cursor-default w-8 h-8 h-contrast:outline-2" href="mailto:domanska.dev@gmail.com">
                 <img src={emailIcon} alt="Email" className="w-8 h-8 mr-2 dark:bg-white dark:rounded-full dark:border-2" />
               </a>
             </div>

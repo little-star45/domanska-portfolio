@@ -26,36 +26,40 @@ const Navbar = () => {
 
       <div className="flex justify-between items-center p-4 text-section-title">
         <h1 className="text-2xl  font-bold">
-          Patrycja Domańska - portfolio
+          <span className="hidden lg:inline">Patrycja</span> Domańska - portfolio
         </h1>
 
-        <section className="flex flex-row gap-6 justify-center items-center align-baseline">
+
+        <section className="flex flex-row gap-4 lg:gap-6 justify-center items-center align-baseline">
           <ul className="hidden lg:flex flex-row gap-6 list-none">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a href={link.href} className="hover:text-gray-600 h-contrast:hover:text-yellow-h-contrast"> {link.label}</a>
             </li>
           ))}
-        </ul>
-        <button className="lg:hidden text-black h-contrast:text-yellow-h-contrast cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-        <button onClick={toggleTheme} className={`cursor-pointer border-2 rounded-full text-black ${isDarkMode ? 'bg-gray-300 hover:bg-white' : 'bg-white hover:bg-gray-300 '} h-contrast:bg-yellow-h-contrast h-contrast:hover:bg-amber-500`}>
-          <img 
-            src={isDarkMode ? DarkModeIcon : LightModeIcon} 
-            alt="theme icon" className="w-6 h-6 m-1" 
-            // stroke="#0f283a" 
-            // strokeWidth={4}
-          />
-        </button>
-        <button onClick={toggleContrast} className="cursor-pointer border-2 rounded-full text-black hover:bg-yellow-h-contrast h-contrast:bg-yellow-h-contrast h-contrast:hover:bg-amber-500">
-          <img 
-            src={isContrastMode ? EyeClosedIcon : EyeOpenIcon}
-            alt="theme icon" className="w-6 h-6 m-1"
-            // stroke="#0f283a"
-            // strokeWidth={4}
-          />
-        </button>
+          </ul>
+          <button className="lg:hidden text-black h-contrast:text-yellow-h-contrast cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+          <div className="flex gap-2">
+            <button onClick={toggleTheme} className={`cursor-pointer border-2 rounded-full text-black ${isDarkMode ? 'bg-gray-300 hover:bg-white' : 'bg-white hover:bg-gray-300 '} h-contrast:bg-yellow-h-contrast h-contrast:hover:bg-amber-500`}>
+            <img 
+              src={isDarkMode ? DarkModeIcon : LightModeIcon} 
+              alt="theme icon" className="w-5 h-5 lg:w-6 lg:h-6 m-1 " 
+              // stroke="#0f283a" 
+              // strokeWidth={4}
+            />
+            </button>
+            <button onClick={toggleContrast} className="cursor-pointer border-2 rounded-full text-black hover:bg-yellow-h-contrast h-contrast:bg-yellow-h-contrast h-contrast:hover:bg-amber-500">
+              <img 
+                src={isContrastMode ? EyeClosedIcon : EyeOpenIcon}
+                alt="theme icon" className="w-5 h-5 lg:w-6 lg:h-6 m-1"
+                // stroke="#0f283a"
+                // strokeWidth={4}
+              />
+            </button>
+          </div>
+        
         
         </section>
       </div>

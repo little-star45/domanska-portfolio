@@ -23,7 +23,7 @@ const ProjectModal = (props) => {
         <>
         <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
             <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
-            <DialogPanel className="w-full max-w-3/7 rounded-xl bg-white p-6 backdrop-blur-2xl duration-300 ease-out data-closed:transform-[scale(95%)] data-closed:opacity-0 border-2 border-black shadow-[10px_10px_0px_0px_black] space-y-4 h-contrast:bg-black h-contrast:border-yellow-h-contrast h-contrast:shadow-[10px_10px_0px_0px_yellow] dark:bg-dark dark:text-white max-h-screen">
+            <DialogPanel className="w-full max-w-6/7 lg:max-w-3/7 rounded-xl bg-white p-6 backdrop-blur-2xl duration-300 ease-out data-closed:transform-[scale(95%)] data-closed:opacity-0 border-2 border-black shadow-[10px_10px_0px_0px_black] space-y-4 h-contrast:bg-black h-contrast:border-yellow-h-contrast h-contrast:shadow-[10px_10px_0px_0px_yellow] dark:bg-dark dark:text-white max-h-screen">
                 <DialogTitle className="font-bold">{projectTitle}</DialogTitle>
                 <div className="prose max-h-156 overflow-y-auto p-6 overflow-x-hidden max-w-full">
                     <ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdownContent}</ReactMarkdown>
