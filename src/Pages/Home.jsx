@@ -140,7 +140,7 @@ function Home() {
             </div>
     </section>
     <hr className='border-1 border-gray-200 shadow-gray-700 shadow-lg' />
-    <section id='section-experience' className='space-y-5 mx-6 scroll-mt-20'>
+    <section id='section-experience' className='space-y-5 mx-0 lg:mx-6 scroll-mt-20'>
         <p className="text-section-title text-center">Experience</p>
 
             {experiences.map((exp, index) => (
