@@ -1,5 +1,6 @@
-import { useState, useEffect} from 'react'
+import { useState, useEffect, useRef} from 'react'
 
+import { motion, AnimatePresence } from "framer-motion"
 import huskyDog from '../assets/reshot-icon-husky-dog-WY4S8KFRCX.svg'
 
 import ProjectModal from '../components/ProjectModal.jsx'
@@ -40,8 +41,22 @@ function Home() {
         updateTheme(darkModeActive, storedContrast === 'h-contrast')
     }, [])
 
+
+
     const modalToggle = () => {
         setIsModalOpen(!isModalOpen)
+    }
+
+    const handleSwipe = (offsetX) => {
+        const swipeThreshold = 50
+        if (Math.abs(offsetX) <= swipeThreshold) return
+
+        const direction = offsetX < 0 ? "next" : "prev"
+
+        setSliderIndex(prev => {
+            const nextIndex = direction === "next" ? prev + 1 : prev - 1
+            return Math.min(Math.max(nextIndex, 0), projectsData.length - 1)
+        })
     }
 
   return (
@@ -111,33 +126,73 @@ function Home() {
     <section id='section-projects' className='space-y-4 scroll-mt-20'>
         <p className="text-section-title text-center">Projects</p>
         <p className="text-center">Here are some of my recent completed projects - for more, please visit my GitHub:</p>
-        <div className='flex flex-wrap justify-center gap-6 items-stretch'>
-            {visibleProjects.map((project, index) => (
-            <ProjectCard
-                key={index}
-                projectTitle={project.projectTitle}
-                projectThumbnail={project.thumbnail}
-                description={project.description}
-                skills={project.skills}
-                projectName={project.projectName}
-                toggleModal={modalToggle}
-                setSelectedProject={setSelectedProject}
+        <div className='hidden lg:block'>
+            <div className='flex flex-wrap justify-center gap-6 items-stretch'>
+                {visibleProjects.map((project, index) => (
+                <ProjectCard
+                    key={index}
+                    projectTitle={project.projectTitle}
+                    projectThumbnail={project.thumbnail}
+                    description={project.description}
+                    skills={project.skills}
+                    projectName={project.projectName}
+                    toggleModal={modalToggle}
+                    setSelectedProject={setSelectedProject}
             />
             ))}
             
-        </div>
-        <div className="flex justify-center gap-2 mt-6">
-            {projectsPages.map((page) => (
-                <span
-                key={page}
-                className={
-                    `w-4 h-4 rounded-full cursor-pointer transition-all 
-                    ${page === Math.floor(sliderIndex / projectsPerPage)? 'bg-yellow-500 scale-125': 'bg-gray-400'}`
-                }
-                onClick={() => setSliderIndex(page * projectsPerPage)}
-                ></span>
-            ))}
             </div>
+            <div className="flex justify-center gap-2 mt-6">
+                {projectsPages.map((page) => (
+                    <span
+                    key={page}
+                    className={
+                        `w-4 h-4 rounded-full cursor-pointer transition-all 
+                        ${page === Math.floor(sliderIndex / projectsPerPage)? 'bg-yellow-500 scale-125': 'bg-gray-400'}`
+                    }
+                    onClick={() => setSliderIndex(page * projectsPerPage)}
+                    ></span>
+                ))}
+            </div>  
+        </div>
+
+        <div className='relative lg:hidden'>
+
+            <div className="pl-1 text-3xl text-white/20 absolute flex items-center top-0 left-0 w-12 h-full bg-gradient-to-r from-gray-500/30 to-transparent pointer-events-none z-10">◀</div>
+            <div className="pr-1 text-3xl text-white/20 absolute flex items-center justify-end top-0 right-0 w-12 h-full bg-gradient-to-l from-gray-500/30 to-transparent pointer-events-none z-10">▶</div>
+
+            <div className='flex justify-center mx-auto'>
+                <AnimatePresence mode="wait">
+                {projectsData.slice(sliderIndex, sliderIndex + 1).map((project, index) => (
+                    <motion.div
+                    key={`${project.projectName}-${sliderIndex}`}
+                    drag="x"
+                    dragConstraints={{ left: 0, right: 0 }}
+                    dragElastic={0.3}
+                    onDragEnd={(event, info) => {
+                        handleSwipe(info.offset.x)
+                    }}
+                    >
+                       <ProjectCard
+                            projectTitle={project.projectTitle}
+                            projectThumbnail={project.thumbnail}
+                            description={project.description}
+                            skills={project.skills}
+                            projectName={project.projectName}
+                            toggleModal={modalToggle}
+                            setSelectedProject={setSelectedProject}
+                    /> 
+                    </motion.div>
+                
+            ))}
+            
+            </AnimatePresence>
+            
+
+            </div>
+            
+        </div>
+        
     </section>
     <hr className='border-1 border-gray-200 shadow-gray-700 shadow-lg' />
     <section id='section-experience' className='space-y-5 mx-0 lg:mx-6 scroll-mt-20'>
